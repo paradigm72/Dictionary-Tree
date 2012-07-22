@@ -6,10 +6,11 @@ using System.Text;
 namespace DictionaryClasses
 {
     /// <summary>
-    /// <para>This class is holds a dictionary in the form of a 26-node wide tree.
-    /// The depth of the tree is equal to the longest word in the dictionary.</para>
-    /// <para>The intended use is to determine whether a given string is a valid English word in O(n) time,
-    /// where n is the number of characters in the word.</para>
+    /// This is a dictionary tree node that has a single child, which presumably is the letter following it in the
+    /// potential word (e.g., the node for 'b' in the word 'abstract' has at least the child 's').
+    /// 
+    /// It's used for checking either completeness of entire words, or validity of a word stem starting from the
+    /// beginning of the word.
     /// </summary>
     class MonoDirTreeNode
     {

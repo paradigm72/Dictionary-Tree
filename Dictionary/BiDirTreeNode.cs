@@ -6,6 +6,16 @@ using DictionaryClasses;
 
 namespace DictionaryClasses
 {
+    /// <summary>
+    /// This is a dictionary tree node that can be used to go both backwards and forwards in words to check validity.
+    /// This would be useful if, for example, you know some of the letters in the middle of a word, and want to
+    /// check whether those letters form a valid word 'stem'.
+    /// 
+    /// 7/21/12:
+    /// The bidirectional tree is currently not actually built by Dictionary.Initialize and the API to use it effectively
+    /// doesn't exist yet (you'd need to be able to pass in some kind of pattern code to use this for something like
+    /// Cryptoquote solving).
+    /// </summary>
     class BiDirTreeNode
     {
         char myLeftChar;
