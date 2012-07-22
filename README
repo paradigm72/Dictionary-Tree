@@ -1,3 +1,5 @@
 This is a dictionary class that front-loads nearly all of the performance cost of searching a large word set into initialization, so that individual word lookups happen in linear (where n = the number of letters in the word) time.
 
 Suggested usage: in a spellchecker module for a text box, in a spelling game like Scrabble/SpellTower/etc.
+
+Currently it works on either complete words, or word stems beginning at the start (or end) of a word. It also contains the beginnings of an alternate tree that could work on middle stems, but that piece is mostly not implement yet.
