@@ -2,4 +2,4 @@ This is a dictionary class that front-loads nearly all of the performance cost o
 
 Suggested usage: in a spellchecker module for a text box, in a spelling game like Scrabble/SpellTower/etc.
 
-Currently it works on either complete words, or word stems beginning at the start (or end) of a word. It also contains the beginnings of an alternate tree that could work on middle stems, but that piece is mostly not implement yet.
+Currently it works on either complete words, or word stems beginning at the start (or end) of a word. It also contains the beginnings of an alternate tree that could work on middle stems, but that piece is mostly not implemented yet.
