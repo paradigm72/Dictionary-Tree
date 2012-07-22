@@ -149,6 +149,7 @@
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.label1);
             this.Name = "DictionaryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dictionary Tester";
             this.Load += new System.EventHandler(this.DictionaryForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);

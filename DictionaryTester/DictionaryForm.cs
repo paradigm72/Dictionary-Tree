@@ -23,8 +23,8 @@ namespace DictionaryTester
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
+            //start in the same directory as this project
             openFileDialog1 = new OpenFileDialog();
-            //openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -69,8 +69,11 @@ namespace DictionaryTester
             {
                 txtOutput.AppendText(testString + " is not a word");
             }
+
             mySW.Stop();
-            txtOutput.AppendText(" (" + mySW.ElapsedTicks / System.Diagnostics.Stopwatch.Frequency * 1000 + "ms)\r\n");
+            //The execution time should always be less than 1 ms, so we need to track ticks and convert back to ms
+            double elapsedMS = (double)mySW.ElapsedTicks / (double)(System.Diagnostics.Stopwatch.Frequency * 1000);
+            txtOutput.AppendText(" (" + elapsedMS + "ms)\r\n");
 
         }
 
