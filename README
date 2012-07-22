@@ -1,0 +1,3 @@
+This is a dictionary class that front-loads nearly all of the performance cost of searching a large word set into initialization, so that individual word lookups happen in linear (where n = the number of letters in the word) time.
+
+Suggested usage: in a spellchecker module for a text box, in a spelling game like Scrabble/SpellTower/etc.
